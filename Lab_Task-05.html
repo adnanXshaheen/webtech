@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Personal Academic Profile">
+    <meta name="keywords" content="HTML5, profile, education, form">
+    <meta name="author" content="Adnan">
+    <title>Academic Profile</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Adnan Shaheen</h1>
+
+    <nav>
+        <a href="#bio">Biography</a>
+        <a href="#edu">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+<section id="bio">
+    <h2>Biography</h2>
+    <p>I am a Computer Science student learning Web Technologies.</p>
+</section>
+
+<section id="edu">
+    <h2>Education</h2>
+
+    <table border="1">
+        <caption>Education Details</caption>
+
+        <thead>
+            <tr>
+                <th>Degree</th>
+                <th>Institution</th>
+                <th>Year</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>BSc in CSE</td>
+                <td>AIUB</td>
+                <td>2026</td>
+                <td>Running</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form>
+
+        <label for="name">Name</label><br>
+        <input type="text" id="name" placeholder="Your name" required maxlength="30"><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" placeholder="Your email" required><br><br>
+
+        <label for="phone">Phone</label><br>
+        <input type="tel" id="phone" placeholder="01XXXXXXXXX" pattern="[0-9]{11}"><br><br>
+
+        <label for="msg">Message</label><br>
+        <textarea id="msg" placeholder="Write message" required maxlength="200"></textarea><br><br>
+
+        <button type="submit">Send</button>
+
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>Email: adnan@email.com</p>
+    <p>© 2026 Adnan</p>
+</footer>
+
+</body>
+</html>
