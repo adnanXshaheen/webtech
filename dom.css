@@ -1,13 +1,15 @@
-/* Basic page styling */
+/* Page styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    padding: 20px;
+    background: linear-gradient(135deg, #e8f0ff, #ffffff);
+    padding: 30px;
 }
 
 /* Heading */
 h1 {
     text-align: center;
+    color: #333;
+    margin-bottom: 25px;
 }
 
 /* Form styling */
@@ -16,80 +18,120 @@ form {
     text-align: center;
 }
 
+/* Input fields */
 input[type="text"] {
-    padding: 8px;
-    width: 200px;
-    margin: 5px;
-}
-
-button {
-    padding: 8px 12px;
-    margin-left: 5px;
-    cursor: pointer;
-}
-
-/* Student list styling */
-#student-list {
-    list-style-type: none;
-    padding: 0;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-/* Student item */
-.student-item {
-    background-color: #ffffff;
     padding: 10px;
-    margin-bottom: 8px;
+    width: 220px;
+    margin: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: 0.2s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76,175,80,0.3);
+}
+
+/* Buttons */
+button {
+    padding: 9px 14px;
+    border-radius: 6px;
+    border: none;
+    margin-left: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+/* Button hover animation */
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Student list */
+#student-list {
+    list-style: none;
+    padding: 0;
+    max-width: 520px;
+    margin: 20px auto;
+}
+
+/* Student card */
+.student-item {
+    background: white;
+    padding: 12px 15px;
+    margin-bottom: 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    border-radius: 8px;
     border: 1px solid #ddd;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+/* Hover effect */
+.student-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
 /* Name and roll */
 .student-item span {
     flex: 1;
+    font-weight: 500;
 }
 
-/* Edit and delete buttons */
+/* Edit button */
 .btn-edit {
     background-color: #4caf50;
     color: white;
-    border: none;
 }
 
+.btn-edit:hover {
+    background-color: #3fa344;
+}
+
+/* Delete button */
 .btn-delete {
     background-color: #f44336;
     color: white;
-    border: none;
-    margin-left: 5px;
 }
 
-/* Highlight style for students */
+.btn-delete:hover {
+    background-color: #d9372c;
+}
+
+/* Highlight style */
 .highlight {
-    background-color: yellow;
+    background-color: #fff59d;
 }
 
 /* Present student */
 .present {
-    background-color: #c8f7c5;
+    background-color: #d4f8d4;
 }
 
 /* Highlight first student */
 .top-student {
-    border: 3px solid blue;
+    border: 3px solid #2196f3;
 }
 
-/* Search box styling */
+/* Search box */
 #search-box {
-    padding: 8px;
-    width: 250px;
+    padding: 10px;
+    width: 260px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 
-/* Count text */
+/* Counters */
 #student-count,
 #attendance-count {
+    text-align: center;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 12px;
+    color: #444;
 }
