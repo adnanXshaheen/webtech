@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Info AJAX App</title>
+    <script>
+        function loadStudents() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET", "students.php", true);
+
+            xhr.onload = function () {
+                if (this.status === 200) {
+
+                    // Convert JSON to JS object
+                    var students = JSON.parse(this.responseText);
+
+                    var output = "<h3>Student List</h3>";
+
+                    students.forEach(function(student) {
+                        output += `
+                            <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+                                <strong>Name:</strong> ${student.name} <br>
+                                <strong>ID:</strong> ${student.id} <br>
+                                <strong>Department:</strong> ${student.department} <br>
+                                <strong>CGPA:</strong> ${student.cgpa}
+                            </div>
+                        `;
+                    });
+
+                    document.getElementById("result").innerHTML = output;
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Student Information System</h2>
+
+    <button onclick="loadStudents()">Load Students</button>
+
+    <div id="result" style="margin-top:20px;"></div>
+
+</body>
+</html>
